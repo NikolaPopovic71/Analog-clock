@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analog Clock</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="sound" id="sound">
+      <div class="selectSound">
+        <select name="sound" id="selectsound" title="sounds">
+          <option selected disabled hidden>Select Sound</option>
+          <option value="sound1">Sound 1</option>
+          <option value="sound2">Sound 2</option>
+          <option value="sound3">Sound 3</option>
+          <option value="sound4">Sound 4</option>
+        </select>
+      </div>
+
+      <div class="volume">
+        <label for="glow">Volume:</label>
+        <input
+          type="range"
+          class="glow"
+          id="glow"
+          style="--val: 50"
+          value="50"
+          min="0"
+          max="100"
+          oninput="this.style='--val:'+this.value"
+          title="range"
+        />
+      </div>
+
+      <!--digital clock-->
+      <div id="time">
+        <div id="hours">00</div>
+        <div id="minutes">00</div>
+        <div id="seconds">00</div>
+        <div id="ampm">AM</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!--Analog Clock-->
+      <div class="clock">
+        <div class="circle" id="sc"><i></i></div>
+        <div class="circle circle2" id="mn"><i></i></div>
+        <div class="circle circle3" id="hr"><i></i></div>
+
+        <span><b>1</b></span>
+        <span><b>2</b></span>
+        <span><b>3</b></span>
+        <span><b>4</b></span>
+        <span><b>5</b></span>
+        <span><b>6</b></span>
+        <span><b>7</b></span>
+        <span><b>8</b></span>
+        <span><b>9</b></span>
+        <span><b>10</b></span>
+        <span><b>11</b></span>
+        <span><b>12</b></span>
+      </div>
+
+      
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
